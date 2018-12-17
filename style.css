@@ -1,0 +1,24 @@
+table {
+	text-align: center;
+	font: 48px monospace, sans-serif;
+	border-collapse: collapse;
+}
+
+td {
+	height: 100px;
+	width: 100px;
+	border: 4px solid black;
+}
+
+table tr:first-child td {
+	border-top: none;
+}
+table tr:last-child td {
+	border-bottom: none;
+}
+table td:first-child {
+	border-left: none;
+}
+table td:last-child {
+	border-right: none;
+}
