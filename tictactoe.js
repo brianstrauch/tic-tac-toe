@@ -67,13 +67,12 @@ function minimax(state, player, depth) {
 	for (var i = 0; i < state.length; i++) {
 		indices[i] = i;
 	}
-
 	if (depth == 0) {
 		indices.shuffle();
 	}
 
 	var bestIndex = 0;
-	var bestScore = (player == AI) ? -1000000 : 1000000;
+	var bestScore = 0;
 
 	for (var i = 0; i < indices.length; i++) {
 		var index = indices[i];
@@ -121,7 +120,7 @@ function isWin(state, player) {
 		var b = state[pattern[1]];
 		var c = state[pattern[2]];
 
-		if (a == player && a == b && a == c) {
+		if (a == player && b == player && c == player) {
 			return true;
 		}
 	}
