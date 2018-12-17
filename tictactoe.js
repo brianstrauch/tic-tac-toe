@@ -72,7 +72,7 @@ function minimax(state, player, depth) {
 	}
 
 	var bestIndex = 0;
-	var bestScore = 0;
+	var bestScore = (player == AI) ? -Infinity : Infinity;
 
 	for (var i = 0; i < indices.length; i++) {
 		var index = indices[i];
